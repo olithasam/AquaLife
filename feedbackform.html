@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Query</title>
+    <link rel="stylesheet" href="style/form.css">
+    <link rel="stylesheet" href="style/navbar.css">
+    <link rel="stylesheet" href="style/footer.css">
+    <script src="form.js"></script>
+    
+</head>
+<body >
+
+    <!-- Navigation bar -->
+    <nav>
+        <div class="logo">
+            <a href="#"><img src="images/logoaqua.jpg" alt="Logo"></a>
+        </div>
+        <!-- List of navigation links -->
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="Gallery.html">Gallery</a></li>
+            <li><a href="Shop.html">Shop</a></li>
+            <li><a href="feedbackform.html">Query</a></li>
+            <li><a href="Sitemap.html">Sitemap</a></li>
+            <li><a href="user.html">Profile</a></li>
+            <li><a href="aboutus.html">About us</a></li>
+        </ul>
+    </nav>
+
+    <div class="background"></div>
+    <!-- Feedback form -->
+    <form action="feedback" id="feedbackform" onsubmit="return handleSubmit()">
+        <h2>Feedaback Form</h2>
+        <p>Please share your feedback regarding the website</p><br>
+
+        <!-- Name input -->
+        <label for="name">Name: </label><br>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required><br><br>
+
+        <!-- Email input -->
+        <label for="email">Email: </label><br>
+        <input type="email" id="email" name="email" placeholder="Enter your Email" required><br><br>
+
+        <!-- First visit question -->
+        <label for="yes1">Was this your first visiting?</label><br><br>
+        <input type="radio" id="yes1" name="vyesno" value="vyes" required>Yes
+        <input type="radio" id="no1" name="vyesno" value="vno">No<br><br>
+
+        <!-- Informative and easy to navigate question -->
+        <label for="yes2">Was this website informative and easy to navigate through?</label><br><br>
+        <input type="radio" id="yes2" name="yesno" value="yes" required>Yes
+        <input type="radio" id="no2" name="yesno" value="no">No<br><br>
+
+        <!-- Suggestions for improvement -->
+        <label for="suggession">If suggest any improvements for the future: </label><br>
+        <textarea id="suggession" name="suggession" rows="4" cols="50" placeholder="Add your message here"></textarea><br><br>
+
+        <!-- Rating -->
+        <label for="rate1">How satisfied are you with Our services?<br>Choose from 0 to 10, with 1 being "Not satisfied at all !" and 10 being "Extremely satisfied!"</label>
+        <div class="star-rating"><br><br>
+
+            <input type="radio" name="rate" id="rate1" value="1" >
+            <label for="rate1">1</label>
+
+            <input type="radio" name="rate" id="rate2" value="2" >
+            <label for="rate2">2</label>
+
+            <input type="radio" name="rate" id="rate3" value="3" >
+            <label for="rate3">3</label>
+
+            <input type="radio" name="rate" id="rate4" value="4" >
+            <label for="rate4">4</label>
+
+            <input type="radio" name="rate" id="rate5" value="5" >
+            <label for="rate5">5</label>
+
+            <input type="radio" name="rate" id="rate6" value="6" >
+            <label for="rate6">6</label>
+            
+            <input type="radio" name="rate" id="rate7" value="7" >
+            <label for="rate7">7</label>
+
+            <input type="radio" name="rate" id="rate8" value="8" >
+            <label for="rate8">8</label>
+
+            <input type="radio" name="rate" id="rate9" value="9" >
+            <label for="rate9">9</label>
+
+            <input type="radio" name="rate" id="rate10" value="10" >
+            <label for="rate10">10</label><br><br>
+        </div><br>
+
+        <!-- Recommendation question -->
+        <label for="yes5">Would you recommend our services?</label><br><br>
+        <input type="radio" id="yes5" name="ryesno" value="ryes" required>Yes
+        <input type="radio" id="no5" name="ryesno" value="rno">No<br><br>
+
+        <!-- Additional questions or requests -->
+        <label for="request">Do you have any additional questions or request?</label><br>
+        <textarea id="request" name="request" rows="4" cols="50" placeholder="Add your message here"></textarea><br><br>
+
+        <!-- Contact preference -->
+        <label for="contact">Would you like to receive updates about the website and any offers?</label>
+        <select name="contact" id="contact" onchange="redirectToSelectedOption()">
+            <option value="via-Email" data-url="mailto:aqualife.lanka02@gmail.com">Via Email</option>
+            <option value="via-Facebook" data-url="https://www.facebook.com/">Via Facebook</option>
+        </select><br><br>
+
+        <!-- Clear and Submit buttons -->              
+        <input type="reset" name="Clear" value="Clear">
+        <input type="submit" name="Send" value="Send">
+
+    </form><br><br>
+
+    <!-- Footer section -->
+    <footer  >
+        <div id="thirdpart" class="linkmail">
+        <h3>AquaLife</h3>
+
+          <!-- Contact information -->
+          <Address>57/4, Galle-road<br>
+          Colombo-06<br>Srilanka<br>Contact details:<br>Phone :(+94)78 468 8490, (+94)77 546 8848<br>
+          Email : <a  href="mailto:aqualife.lanka02@gmail.com"> aqualife.lanka02@gmail.com</a> <br>
+          facebook : <a  href="https://www.facebook.com"> AquaLife</a> <br>
+          instagram : <a  href="https://www.instagram.com"> _AquaLife__</a>  
+        </Address>
+          
+          
+        </div>
+        
+        <!-- Copyright information -->
+        <div id="forthpart">
+          <p>Copyright &copy;2024 AquaLife. designed by  <a href="olitha.html">@Olitha Samaraweera </a></p>
+        </div>
+    </footer>
+</body>
+</html>

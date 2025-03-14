@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="style/home.css">
+    <link rel="stylesheet" href="style/navbar.css">
+    <script defer src="form.js"></script>
+    <link rel="stylesheet" href="style/footer.css">
+    
+</head>
+<body>
+
+    <!-- Navigation bar -->
+    <nav>
+        <div class="logo">
+            <a href="#"><img src="images/logoaqua.jpg" alt="Logo"></a>
+        </div>
+        <!-- List of navigation links -->
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="Gallery.html">Gallery</a></li>
+            <li><a href="Shop.html">Shop</a></li>
+            <li><a href="feedbackform.html">Query</a></li>
+            <li><a href="Sitemap.html">Sitemap</a></li>
+            <li><a href="user.html">Profile</a></li>
+            <li><a href="aboutus.html">About us</a></li>
+        </ul>
+    </nav>
+
+    <!-- First section -->
+    <div id="firstpart">
+        <br>
+      <h1 class="firsth1">AquaLife</h1>
+      <h3 class="head">Preserve the ocean's beauty, for it sustains all life.</h3>
+      <br><br><br><br><br><br><br><br><br><br>
+      </div>
+
+      <!-- Second section -->
+      <div id="secondpart">
+      <br><br>
+            <h1 class="secondh1">Our Mission</h1>
+            <p class="Pstyle">At Aqua Life, our mission is to inspire awareness, appreciation, and action for the preservation of our oceans and marine life. Through informative content, captivating imagery, and quality products, we aim to educate and empower individuals to make positive choices that protect our oceans, conserve marine habitats, and safeguard the diverse ecosystems within them. Join us on our journey to celebrate the beauty of the underwater world, advocate for its protection, and foster a deeper connection with our planet's most precious resource.
+            </p>
+        
+        <br><br><br>
+        <!-- Container for images -->
+        <div class="row container"> 
+          <div class="column">
+
+          <!-- sea animals part -->
+          <div class="image1">
+           <a href="seaanimal.html"> <img src="images/seaanimal.jpg" alt="sea" style="width:100%" class="image"></a>
+            <div class="middle middle1">
+              <div class="text2">Sea Animals</div>
+              </div>
+            </div>
+          <!-- sea pollution part -->
+           <div class="image3">
+           <a href="seapollution.html"> <img  src="images/plastic.jpg" alt="seapol" style="width:100%" class="image"></a>
+            <div class="middle middle3">
+              <div class="text2">Marine Pollution</div>
+              </div>
+           </div>
+          </div>
+
+          <!-- sea diving part -->
+          <div class="column">
+            <div class="image4">
+            <a href="Seadiving.html"><img src="images/seadiving.jpg" alt="seadiv" style="width:100%" class="image"></a>
+            <div class="middle middle4">
+              <div class="text2">Sea Diving</div>
+              </div>
+            </div>
+
+            <!-- coral reefs part -->
+            <div class="image5">
+            <a href="coralreefs.html"><img src="images/coralreef.webp" alt="coral" style="width:100%" class="image"></a>
+            <div class="middle middle5">
+              <div class="text2">Coral Reefs</div>
+            </div>
+            
+          </div>  
+        </div>
+      </div>
+      </div>
+          
+       <br><br><br><br><br><br>
+       
+      <h3 class="h3">Best Beaches in Sri Lanka</h3>
+      <p class="Pstyle"><mark></mark></p>
+
+      <!-- Slideshow container -->
+      <div class="slideshow-container">
+      
+      <div class="mySlides fade box">
+        <div class="numbertext">1 / 7</div>
+        <img src="images/hikkaduwa.jpg" alt="hik" style="width: 100%" >
+        <div class="text">Hikkaduwa Beach</div>
+      </div>
+      
+      <div class="mySlides fade box">
+        <div class="numbertext">2 / 7</div>
+        <img src="images/nilaveli.jpg" alt="nil"  style="width: 100%">
+        <div class="text">Nilaveli Beach</div>
+      </div>
+      
+      <div class="mySlides fade box">
+        <div class="numbertext">3 / 7</div>
+        <img src="images/brown1.jpg" alt="brw" style="width: 100%" >
+        <div class="text">Brown Beach</div>
+      </div>
+      
+      <div class="mySlides fade box">
+        <div class="numbertext">4 / 7</div>
+        <img src="images/arugambay.jpg" alt="aru" style="width: 100%">
+        <div class="text">Arugam bay beach</div>
+      </div>
+      
+      
+      <div class="mySlides fade box">
+        <div class="numbertext">5 / 7</div>
+        <img src="images/bentota.jpg" alt="ban" style="width: 100%" >
+        <div class="text">Bentota Beach</div>
+      </div>
+      
+      <div class="mySlides fade box">
+        <div class="numbertext">6 / 7</div>
+        <img src="images/mirissa.jpg" alt="mir" style="width: 100%">
+        <div class="text">Mirissa Beach</div>
+      </div>
+      
+      <div class="mySlides fade box">
+        <div class="numbertext">7 / 7</div>
+        <img src="images/unawatuna.jpg" alt="un" style="width: 100%">
+        <div class="text">Unawatuna Beach</div>
+      </div>
+      
+      <br>
+      <br>
+      <!-- Dots for slide navigation -->
+      <div style="text-align:center">
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+      
+      </div>
+      </div><br><br><br><br><br>
+
+      <!-- Script for slideshow -->
+      <script>
+        let slideIndex = 0;
+        showSlides();
+        
+        function showSlides() {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          slideIndex++;
+          if (slideIndex > slides.length) {slideIndex = 1}    
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+          setTimeout(showSlides, 2000); // Change image every 2 seconds
+        }
+      </script>
+        <br>
+        <br>
+      
+      <!-- Footer section -->
+      <footer  >
+      <div id="thirdpart" class="linkmail">
+      <h3>AquaLife</h3>
+      
+        <Address>57/4, Galle-road<br>
+        Colombo-06<br>Srilanka<br>Contact details:<br>Phone :(+94)78 468 8490, (+94)77 546 8848<br>
+        Email : <a  href="mailto:aqualife.lanka02@gmail.com"> aqualife.lanka02@gmail.com</a> <br>
+        facebook : <a  href="https://www.facebook.com"> AquaLife</a> <br>
+        instagram : <a  href="https://www.instagram.com"> _AquaLife__</a>  </Address>
+        
+      </div>
+      <div id="forthpart">
+        <p>Copyright &copy;2024 AquaLife. designed by  <a href="olitha.html">@Olitha Samaraweera </a></p>
+      </div>
+      </footer>
+</body>
+</html>

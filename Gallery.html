@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <!-- Link to external stylesheet -->
+    <link rel="stylesheet" href="Style.css/Stylegallery.css" >
+    <link rel="stylesheet" href="Style.css/navbar.css" >
+</head>
+<body>
+    <!-- Navigation bar -->
+    <nav>
+        <div class="logo">
+            <a href="#"><img src="logoaqua.jpg" alt="Logo"></a>
+        </div>
+        <!-- List of navigation links -->
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="Gallery.html">Gallery</a></li>
+            <li><a href="Shop.html">Shop</a></li>
+            <li><a href="feedbackform.html">Query</a></li>
+            <li><a href="Sitemap.html">Sitemap</a></li>
+            <li><a href="user.html">Profile</a></li>
+            <li><a href="aboutus.html">About us</a></li>
+        </ul>
+    </nav>
+    <div class="heading">
+        <h3>Gallery</h3>
+    </div>
+    
+    <div class="images">
+        <img src="g2.avif" alt="g2">
+        <img src="g3.avif" alt="g3">
+        <img src="g4.avif" alt="g4">
+        <img src="g5.avif" alt="g5">
+        <img src="g7.png" alt="g6">
+        <img src="g8.webp" alt="g7">
+        <img src="g9.avif" alt="g8">
+        <img src="g17.avif" alt="g9">
+        <img src="g10.avif" alt="g10">
+        <img src="g11.avif" alt="g11">
+        <img src="g14.avif" alt="g12">
+        <img src="g15.avif" alt="g13">
+        <img src="g16.avif" alt="g14">
+        <img src="g12.avif" alt="g15"> 
+        
+    </div>
+    <!-- Detailed image section -->
+    <div>
+        <div class="first">
+            <img src="./g2.avif" alt="g2">
+            <div class="p_box">
+                <p id="description">Description: </p> 
+            </div>
+        </div>
+    </div>
+    
+    <!-- JavaScript to handle image click events -->
+    <script>
+        const imageDescriptions = {
+            "g2.avif":"Jellyfish are fascinating marine creatures belonging to the phylum Cnidaria. They are known for their gelatinous bodies and their graceful, often pulsating movements through the water. Despite their name, jellyfish aren't fish; they are invertebrates, lacking a backbone. Instead, they have a simple body structure consisting of a bell-shaped or umbrella-shaped body and trailing tentacles equipped with stinging cells called nematocysts, which they use for hunting prey and defense.",
+            "g3.avif":"Schools of fish, often referred to as shoals, are groups of fish that swim together in a coordinated manner. This behavior offers various advantages, including protection from predators, improved foraging efficiency, and increased reproductive success.",
+            "g4.avif":"Turtles are ancient reptiles with a distinctive shell that serves as their protective armor. They belong to the order Testudines and are found in various habitats worldwide, from oceans and rivers to forests and deserts. Turtles have been around for over 200 million years, making them one of the oldest living groups of reptiles on Earth.",
+            "g5.avif":"Dolphins are highly intelligent marine mammals belonging to the cetacean family, which also includes whales and porpoises. Known for their playful behavior, remarkable intelligence, and sociable nature, dolphins have captured the fascination of humans for centuries.",
+            "g7.png":"The ingestion of plastics and other non-biodegradable materials by sea animals is a significant and alarming environmental issue with widespread consequences for marine ecosystems. Here's an overview of the problem",
+            "g8.webp":"Garbage dumped into the oceans contributes to marine pollution, which can take various forms, including plastics, metals, glass, rubber, and organic waste. This pollution can degrade water quality, harm marine life, and disrupt ecosystems.",
+            "g9.avif":"Releasing garbage into the oceans, whether intentionally or unintentionally, is a harmful practice with far-reaching consequences for marine ecosystems, human health, and the global environment. Here's an overview of the impacts of releasing garbage into the oceans",
+            "g17.avif":"Coral reefs are one of the most diverse and valuable ecosystems on the planet, often referred to as the rainforests of the sea. They are made up of colonies of tiny animals called coral polyps, which secrete calcium carbonate to form hard skeletons that provide the structure for the reef. Here's a detailed description of coral reefs",
+            "g10.avif":"Coral reefs face numerous threats, including overfishing, destructive fishing practices, coastal development, pollution from land-based sources, and climate change. Conservation efforts aim to address these threats through the establishment of marine protected areas, sustainable fisheries management, pollution reduction measures, and climate change mitigation strategies.",
+            "g11.avif":"coral reefs are vibrant and ecologically rich ecosystems that provide essential services to marine life and human communities. However, they are under threat from a range of human activities and environmental stressors, highlighting the urgent need for concerted action to protect and conserve these invaluable natural treasures.",
+            "g14.avif":"Sea diving, also known as scuba diving, is an exhilarating underwater activity that allows individuals to explore the fascinating world beneath the ocean's surface. Here's a description of sea diving",
+            "g15.avif":"One of the highlights of sea diving is encountering a vast array of marine life in their natural habitat. From colorful coral formations and tropical fish to majestic sea turtles, sharks, dolphins, and rays, divers have the chance to observe and interact with a wide variety of underwater creatures, contributing to a deeper understanding and appreciation of marine ecosystems.",
+            "g16.avif":"Sea diving offers recreational divers an exhilarating and immersive experience, allowing them to escape the surface world and enter a tranquil, weightless environment where time seems to stand still",
+            "g12.avif":"sea diving offers a unique opportunity to explore the breathtaking beauty and diversity of the underwater world. From vibrant coral reefs teeming with life to mysterious shipwrecks steeped in history, sea diving provides an unparalleled adventure for those who seek to discover the wonders of the ocean depths",
+        };
+
+        const images = document.querySelectorAll(".images img");
+        const bigImage = document.querySelector(".first img");
+        const description = document.getElementById("description"); // Selecting the description paragraph
+
+        images.forEach(image => {
+            image.onclick = () => {
+                const imageSource = image.getAttribute("src");
+                const imageDescription = imageDescriptions[imageSource];
+                description.textContent = "Description: " + imageDescription;
+                bigImage.src = imageSource;
+            };
+        });
+    </script>
+    <footer>
+      <p>Page designed by <a href="Maleesha.html"> @Maleesha Ganegoda </a></p>
+    </footer>
+
+</body>
+</html>

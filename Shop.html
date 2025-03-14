@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Buy Cart</title>
+        <style>
+            html{
+                scroll-behavior: smooth;
+            }
+            
+            *{
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+
+            .logo {
+                cursor: pointer;
+                margin-right: auto;
+            }
+
+            .nav_bar li, a{
+                font-family: "Poppins", Arial, sans-serif;
+                font-weight: bold; 
+                font-size: 16px;
+                color:#edf0f1;
+                text-decoration: none;
+            }
+            
+            header {
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                padding: 0 10%;
+                height: 150px;
+                background-color: grey;
+            }
+
+            img {
+                height: 100px;
+                width: 100px;
+            }
+
+            .ask_Btn {
+                margin-left: 25px;
+                padding: 9px 25px;
+                background-color: #3DA4FF;
+                border: none;
+                border-radius: 50px;
+                cursor: pointer;
+                transition: all 0.3s ease 0s;
+            }
+
+            .ask_Btn:hover {
+                background: #0682CF;
+            }
+            .background-stripe{
+                height: 1765px;
+                width: 15%;
+                background-color: #1c2952;
+                position: absolute;
+                top: 70%;
+            }
+
+            .background {
+                background-image: url("picture1.jpg");
+                background-position: center;
+                background-size: cover ;
+                background-repeat: no-repeat ;
+                width: 99.99%;
+                height: 50%;
+                position: absolute;
+                top: 20%;
+                border: 3px solid rgb(9, 13, 97);
+                z-index: -1;
+                filter: blur(5px);
+            }
+            .wel_img{
+                
+                text-align: center;
+                
+            }
+
+            .wel_img h1 {
+                color: #fefefe;
+                font-size: 95px;
+                margin-bottom: 20px;
+                margin-top: 220px;
+                text-shadow: 5px 0 0 black;
+            }
+
+            .wel_img p{
+                color: #fff;
+                font-size: 35px;
+            }
+
+            .prod_img{
+                width: 264px;
+                height: 200px;
+                margin: 10px 18px;
+                border-radius: 25px;   
+            }
+
+            /* View cart button style */
+
+            .viewCartbtn{  
+                text-align: center;
+                width: 80%;
+                position: absolute;
+                border: 1px solid white;
+                border-radius: 20px;
+                margin:10%;
+                height: auto;
+                padding: 5% 0;
+                transition-duration: 0.5s;
+            }
+            .viewCartbtn:hover{
+                color: rgb(9, 13, 97);
+                background-color: white;
+            }
+            #products{
+                position: absolute;
+                top: 75%;
+                left: 20%;
+                height: 100%;
+                
+            }
+            .products{
+                border: 3px solid rgb(9, 13, 97);
+                border-radius: 25px 0 25px 0;
+                transition-duration: 1s;
+                height: 400px;
+                width:300px;
+                margin-left: 30px;
+                margin-bottom: 30px;
+            
+                
+            }
+            .products:hover{
+                background-color: #38b1f3;
+                transition-duration: 1s;
+                box-shadow: 2px 2px 15px rgb(246, 1, 1);
+                border-radius: 0px 25px 0px 25px;
+            }
+            
+            pr{
+                text-align: left;
+                margin-left: 150px;
+            }
+            
+            .productName{
+                font-size: 28px;
+            }
+
+            /* basket and customer purches form */ 
+            .basket{
+                position: absolute;
+                top: 2250px;
+                height: auto;
+                width: 100%;
+                border-style:solid;
+                border-color:rgb(9, 13, 97);
+                border-left-width: 80px;
+                border-right-width: 80px;
+                border-radius:20px;
+                text-align: center;
+                
+            }
+
+            /* Add to cart button */
+
+            .add_To_Cart{
+                margin-top: 30px;
+                height: 40px;
+                width: 100px;
+                border-radius: 25px;
+                background-color: transparent;
+                border: 1px solid rgb(9, 13, 97);
+                transition-duration: 1s;
+            
+            }
+            .add_To_Cart:hover{
+                background-color: rgb(9, 13, 97);
+                color: rgb(255, 255, 255);
+                transition-duration: 1s;
+                
+            }
+              
+            /* submit and clear data button */
+
+            .checkout-btn{
+                margin-top: 25px;
+                width: 150px;
+                height: 30px;
+                border-radius: 20px;
+                border: 1px solid brown;
+                color: brown;
+                transition-duration: 0.5s;
+            }
+            .checkout-btn:hover{
+                background-color: brown;
+                color: white;
+                transition-duration: 0.5s;
+            }
+        
+            .final {
+                bottom: 0;
+                width: 100%;
+                height: 20%;
+            }
+            .final p{
+                text-align: center;
+            }
+            th{
+                width: 450px;
+            }
+            /* CSS for the navigation bar */
+            ul {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                float: right; /* Float the navigation to the right */
+                font-size: 26px; /* Change the font size */
+            }
+            li {
+                display: inline-block;
+                margin-left: 30px; /* Adjust spacing between navigation links */
+                
+            }
+            li a {
+                display: block;
+                text-decoration: none;
+                color: white;
+                padding: 10px 15px;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            li a:hover {
+                background: grey;
+                text-transform: uppercase;
+            }
+            nav {
+                background: black;
+                overflow: hidden;
+                position: fixed; /* Make the navigation bar fixed */
+                width: 100%; /* Set width to 100% */
+                top: 0; /* Position at the top */
+                z-index: 1000; /* Ensure it's above other content */
+                
+            }
+            .logo img {
+                margin-top: 0px;
+                margin-left: -6px;
+                height: 50px; /* Adjust logo height */
+                width: 150px;
+                float: left; /* Float the logo to the left */
+            }
+            .footer {
+                background-color: #4d9886;
+                height: 50px;
+                position: fixed; 
+                bottom: 0; /* Position at the bottom */
+                left: 0; /* Align to the left */
+                width: 100%; /* Set width to 100% */
+            }
+
+            .footer p {
+                font-size: 20px;
+                color: #f2f2f2;
+                font-style: italic;
+                text-align: center;
+                line-height: 50px; /* Vertically center align the text */
+                margin: 0; /* Remove default margin */
+                padding: 0; /* Remove default padding */
+            }
+
+            .footer a {
+                color: #f2f2f2;
+                font-size: 20px;
+                font-style: italic;
+                text-decoration: none; /* Remove underline from links */
+            }
+
+            .footer a:hover {
+                color: black;
+            }
+
+            
+
+        
+        </style>
+    </head>
+        
+    <body>
+
+        <nav>
+            <div class="logo">
+                <a href="#"><img src="logoaqua.jpg" alt="Logo"></a>
+            </div>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="Gallery.html">Gallery</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="feedbackform.html">Query</a></li>
+                <li><a href="Sitmap.html">Sitemap</a></li>
+                <li><a href="aboutus.lk">About us</a></li>
+            </ul>
+        </nav>
+        
+        <div>
+            <div class="background"></div>
+            <div class = "wel_img">
+                <h1>Welcome to AquaLife Online Shop</h1>
+                <p>Buy our product and be a hero of United Nation</p>
+            </div>
+            <div class = "background-stripe"><a href="#basket" class="viewCartbtn" onclick="checkCart()">Check Basket</a></div> <!--Call chechCart function-->
+        </div>
+        
+        <!--Creating a products by using table tag-->
+            <table id="products"> 
+
+                <tr> <!-- Stating table row-->
+                    <th>
+                        <div id="product1" class="products">
+                            <img class="prod_img" src="Images/Divig_watch.webp" alt="Watch for Diving">
+                            <p class="productName">Watch for Diving</p>
+                            <span id="price1">&#163;25.00</span><br>
+                            <button class="add_To_Cart" onclick="addToCart(this)">Add to Cart</button><br>
+                        </div>
+                    </th>
+                    <th>
+                        <div id="product2" class="products">
+                            <img class="prod_img" src="Images/Diving_goggles.webp" alt="Diving Goggles">
+                            <p class="productName">Diving Goggles</p>
+                            <span id="price2">&#163;15.75</span><br>
+                            <button class="add_To_Cart" onclick="addToCart(this)">Add to Cart</button><br>
+                        </div>
+                    </th>
+                    <th>
+                        <div id="product3" class="products">
+                            <img class="prod_img" src="Images/Diving_Suit.jpg" alt="Diving Suit">
+                            <p class="productName">Diving Suit</p>
+                            <span id="price3">&#163;25.50</span><br>
+                            <button class="add_To_Cart" onclick="addToCart(this)">Add to Cart</button><br>
+                        </div>
+                    </th>
+                </tr> <!-- End of table row-->
+                
+                <tr> <!-- Stating table row-->
+                    <th>
+                        <div id="product4" class="products">
+                            <img class="prod_img" src="Images/Fins.jpg" alt="Fins">
+                            <p class="productName">Fins</p>
+                            <span id="price4">&#163;35.30</span><br>
+                            <button class="add_To_Cart" onclick="addToCart(this)">Add to Cart</button><br>
+                        </div>
+                    </th>
+                    <th>
+                        <div id="product5" class="products">
+                            <img class="prod_img" src="Images/First_Aid_kit.jpg" alt="First Aid Kit">
+                            <p class="productName">First Aid Kit</p>
+                            <span id="price5">&#163;50.00</span><br>
+                            <button class="add_To_Cart" onclick="addToCart(this)">Add to Cart</button><br>
+                        </div>
+                    </th>
+                    <th>
+                        <div id="product6" class="products">
+                            <img class="prod_img" src="Images/Fish_Food.jpg" alt="Fish food">
+                            <p class="productName">Fish Food</p>
+                            <span id="price6">&#163;20.00</span><br>
+                            <button class="add_To_Cart" onclick="addToCart(this)">Add to Cart</button><br>
+                        </div>
+                    </th>
+                </tr> <!-- End of table row-->
+                
+                <tr> <!-- Stating table row-->
+                    <th>
+                        <div id="product7" class="products">
+                            <img class="prod_img" src="Images/H2O_tanks.jpg" alt="H2O tanks">
+                            <p class="productName">H2O Tanks</p>
+                            <span id="price7">&#163;30.00</span><br>
+                            <button class="add_To_Cart" onclick="addToCart(this)">Add to Cart</button><br>
+                        </div>
+                    </th>
+                    <th>
+                        <div id="product8" class="products">
+                            <img class="prod_img" src="Images/Half-Cap.webp" alt="Half-cap">
+                            <p class="productName">Half Cap</p>
+                            <span id="price8">&#163;2.75</span><br>
+                            <button class="add_To_Cart" onclick="addToCart(this)">Add to Cart</button><br>
+                        </div>
+                    </th>
+                    <th>
+                        <div id="product9" class="products">
+                            <img class="prod_img" src="Images/O2-tank.webp" alt="O2 Tanks">
+                            <p class="productName">O2 Tanks</p>
+                            <span id="price9">&#163;70.00</span><br>
+                            <button class="add_To_Cart" onclick="addToCart(this)">Add to Cart</button><br>
+                        </div>
+                    </th>
+                </tr> <!-- End of table row-->
+
+                <tr> <!-- Starting table row-->
+                    <th>
+                        <div id="product10" class="products">
+                            <img class="prod_img" src="Images/rescue_boat.jpg" alt="Rescue Boat">
+                            <p class="productName">Rescue Boat</p>
+                            <span id="price10">&#163;300.00</span><br>
+                            <button class="add_To_Cart" onclick="addToCart(this)">Add to Cart</button><br>
+                        </div>
+                    </th>
+                    <th>
+                        <div id="product11" class="products">
+                            <img class="prod_img" src="Images/Rescue_ring_holder.jpg" alt="Rescue ring holder">
+                            <p class="productName">Rescue Ring Holder</p>
+                            <span id="price11">&#163;10.75</span><br>
+                            <button class="add_To_Cart" onclick="addToCart(this)">Add to Cart</button><br>
+                        </div>
+                    </th>
+                    <th>
+                        <div id="product12" class="products">
+                            <img class="prod_img" src="Images/Diving_gloves.webp" alt="Diving Gloves">
+                            <p class="productName">Diving Gloves</p>
+                            <span id="price12">&#163;15.75</span><br>
+                            <button class="add_To_Cart" onclick="addToCart(this)">Add to Cart</button><br>
+                        </div>
+                    </th>
+                </tr> <!-- End of table row-->
+                
+        </table>
+
+        <br>
+
+        <div class="basket" id="basket"> <!--Make a bill and cart for display the product brougth by user-->
+            <h1>Basket</h1>
+            <div>
+                
+            </div>
+            
+            <table class="basket_li" id="basket_li"> <!--Make separate part for cart and using table tag-->
+                <tr>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Remove</th>
+                </tr>
+            </table>
+
+            <hr>
+
+            <!--Getting user details by using form tag-->
+            <form>
+                <h1>Customer details</h1> <!-- Move the <h1> outside of the <table> -->
+                <table class="payment_det" id="payment_det">
+                    <tr>
+                        <th>
+                            <label for="p_name">Person Name:</label>
+                            <input type="text" id="p_name" name="p_name" required>
+                        </th>
+            
+                        <th>
+                            <label for="p_address">Address:</label>
+                            <input type="text" id="p_address" name="p_address" required>
+                        </th>
+            
+                        <th>
+                            <label for="p_country">Country:</label>
+                            <input type="text" id="p_country" name="p_country" required>
+                        </th>
+                        <th>
+                            <label for="p-tele_num">Phone Number:</label>
+                            <input type="tel" id="p-tele_num" name="p-tele_num" required>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <label for="card_num">Card Number:</label>
+                            <input type="number" id="card_num" name="card_num" required>
+                        </th>
+            
+                        <th>
+                            <label for="card_name">Card Name:</label>
+                            <input type="text" id="card_name" name="card_name" required>
+                        </th>
+            
+                        <th>
+                            <label for="ex_date">Expiry Date:</label>
+                            <input type="date" id="ex_date" name="ex_date" required>
+                        </th>
+                        <th>
+                            <label for="cvv">CVV:</label>
+                            <input type="number" id="cvv" name="cvv" required>
+                        </th>
+                    </tr>
+                </table>
+                <input type="submit" value="Submit" class="checkout-btn" oncontextmenu="orderPlaced">
+                <input type="reset" value="Clear Data" class="checkout-btn">
+            </form>
+            
+            <br>
+
+            <hr>
+
+            <div class="final"> <!--Separate part for display total, quantity-->
+                <p>
+                    Total :&#163;<span id ="total"></span><br>
+                    Quantity : <span id ="quantity"></span><br><br><br><br><br>
+                </p>
+            </div>
+
+            <br>
+
+        </div>
+
+        <script>
+            // Variables //
+
+            var total = 0;
+            var quantity = 0;
+            var addToCartCount = 0;
+            
+            function addToCart(product){ //click on add to cart button it will add to cart//
+                var x = product.parentElement.children;
+                var productName = x[0].alt;
+                var productPrice = x[2].textContent;
+
+                
+                addToTotal(productPrice); // Get price as a argument, adds to the 'total' and remove the pounds sign//
+                
+                // Creating table row and cells //
+                var table = document.getElementById("basket_li");
+                var tableRow = document.createElement("tr");
+                table.appendChild(tableRow);
+                
+                var tableData1 = document.createElement("td");
+                var tableData2 = document.createElement("td");
+                var tableData3 = document.createElement("td");
+                
+                tableRow.appendChild(tableData1);
+                tableRow.appendChild(tableData2);
+                tableRow.appendChild(tableData3);
+                
+                // Creating remove button 
+
+                var removeBtn = document.createElement('button');
+                
+                tableData3.appendChild(removeBtn);
+                removeBtn.textContent = "remove";
+            
+                // Display the price and product in cells
+
+                tableData1.textContent = productName;
+                tableData2.textContent = productPrice;
+                removeBtn.onclick = function remove(){
+                    
+                    total -= parseInt(productPrice.slice(1));
+                    document.getElementById("total").innerHTML = total;
+                    quantity--;
+                    document.getElementById("quantity").innerHTML=quantity;
+                    
+                    table.removeChild(tableRow);  
+                }
+                
+                function addToTotal(price){
+                   
+                     total += parseInt(price.slice(1));
+                    document.getElementById("total").innerHTML = total;
+                    
+                    quantity++;
+                    document.getElementById("quantity").innerHTML=quantity; 
+                }
+
+                addToCartCount++;
+            }
+
+            //  Check product cart for view the cart //
+
+            function checkCart() {
+                if (addToCartCount == 0) {
+                    alert("Cart is zero. Please select at least one product.");
+                }
+                else{
+                    viewCart();
+                }
+            }
+
+            function viewCart() {
+                var billSection = document.getElementById("bill");
+                billSection.style.display = 'block';
+                billSection.scrollIntoView({behavior: "smooth"});
+            }
+
+        </script> 
+        <br><br><br><br>
+        <div class="footer">
+            <footer>
+            <p>Page designed by <a href="nimshan.html"> @Nimshan Munasinghe </a></p>
+            </footer>
+        </div>
+    
+    </body>
+</html>        
