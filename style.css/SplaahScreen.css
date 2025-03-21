@@ -1,0 +1,172 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+header {
+    position: relative;
+    left: 0;
+    right: 0;
+    width: 1005;
+    height: 80px;
+}
+
+header h4 {
+    position: absolute;
+    left: 10%;
+    bottom: 1rem;
+    font-size: 1.6rem;
+}
+
+/* Splash Screen */
+
+.intro {
+    background: url(background1.2.jpg);
+    background-position: center;
+    background-size: cover ;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #110b55f8;
+    transform: 1s;
+}
+
+.logo-header {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+}
+
+.logo {
+    position:relative;
+    top:-150px;
+    display: inline-block;
+    bottom: -20px;
+    opacity: 0;
+    font-size: 30px;
+}
+
+.logo.active {
+    bottom: 0;
+    opacity: 1;
+    transition: ease-in-out 0.5s;
+}
+
+.logo.fade {
+    bottom: 150px;
+    opacity: 0;
+    transition: ease-in-out 0.5s;
+}
+
+#logohead {
+    width: 100px; 
+    height: auto; 
+    margin-right: 10px; 
+    filter: drop-shadow(5px 5px 10px #555);
+    
+}
+
+#logohead img {
+    width: 300px;
+    height: auto; 
+    margin-left: 623px;
+    margin-top: 200px;
+}
+
+.about_as,
+.mission {
+    position: absolute;
+    top: 40%;
+    width: 50%; /* Assuming you want both elements to occupy 50% width */
+    opacity: 1;
+}
+
+.about_as {
+    text-align: center;
+    right: 70%;
+    width: 400px;
+    padding: 2%;
+    font-size: 20px;
+    color: whitesmoke;
+    background: linear-gradient(#3e22f3, #8884f6);
+}
+
+.mission {
+    left: 70%;
+    width: 400px;
+    padding: 2%;
+    font-size: 20px;
+    color: whitesmoke;
+    background: linear-gradient(#3e22f3, #8884f6);
+}
+
+/* Using this part ( pseudo-elements)  for the make border of the about as and mission box */
+
+.about_as::before, 
+.about_as::after,
+.mission::before,
+.mission::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: #fff;
+}
+
+.about_as::before,
+.mission::before {
+    z-index: -1;
+}
+
+.about_as::after,
+.mission::after {
+    z-index: -2;
+    filter: blur(40px);
+}
+
+.about_as::before,   /* border background color */
+.about_as::after,
+.mission::before,
+.mission::after {
+    background: linear-gradient(235deg, #0400fe, #0400fe, #0400fe);
+}
+
+h4 {
+    text-align: center;
+}
+
+.loader {
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 40%;
+    left: 46%;
+    transform: translate(-50%, -50%);
+    z-index: 9999; 
+    animation: spin 2s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+
+
+
+
+
+
+

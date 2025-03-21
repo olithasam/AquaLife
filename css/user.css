@@ -1,0 +1,139 @@
+/* Resetting default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+}
+/* Styles for sections */
+section {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 0;
+}
+
+.user-details {
+    width: 300px;
+}
+
+/* Styles for start button */
+
+.strtBtn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.strtBtn button {
+    width: 100px;
+    height: 35px;
+    border-radius: 35px;
+    border: 1px solid gray;
+    background-color: aquamarine;
+    cursor: pointer;
+}
+/* Styles for question number */
+.question-number {
+    margin-top: 26px;
+    font-size: 16px;
+    font-family: sans-serif;
+}
+/* Styles for next and skip button */
+.next-and-skip-btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 24px
+}
+
+.nsbtn {
+    display: flex;
+}
+
+.nsbtn button {
+    width: 100px;
+    height: 35px;
+    border-radius: 35px;
+    border: 1px solid gray;
+    background-color: aquamarine;
+    cursor: pointer;
+    margin: 0 5px;
+}
+/* Styles for progress */
+.prog {
+    margin-top: 20px;
+    font-family: sans-serif;
+    font-size: 14px
+}
+
+.prog-container {
+    width: 100%;
+    height: 10px;
+    background-color: #ddd;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.prog-bar {
+    width: 10%;
+    height: 100%;
+    background-color: #00cc4e;
+    border-radius: 10px;
+}
+/* Styles for output*/
+.output,
+.final-out {
+    width: calc(100% - 40px);
+    margin-top: 18px;
+    border-radius: 25px;
+    padding: 22px;
+    border: 1px solid rgb(96, 96, 96);
+    background-color: rgb(234, 233, 233);
+}
+
+.output ul li,
+.final-out ul li {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
+.output ul li:nth-child(1),
+.final-out ul li:nth-child(1) {
+    margin-top: 0;
+
+}
+
+.final-out {
+    display: none;
+}
+
+.final-out ul li div {
+    width: 100%;
+    height: 4px;
+    background-color: #00cc4e;
+    border-radius: 5px;
+
+}
+/* Styles for footer */
+footer{
+    margin-top: 10px;
+    background: #000;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    font-size: 20px;
+}
+
+footer{
+    color: #fff;
+    padding: 10px;
+}
+footer a{
+    color: aqua;
+}

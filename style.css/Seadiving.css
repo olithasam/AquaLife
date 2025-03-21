@@ -1,0 +1,211 @@
+/* Sets the background image and its display properties */
+body{
+    background-image: url(divewall.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    background-size: 100% 100%;
+}
+h1{font-size: 100px;
+    text-align: center;
+    color: rgb(5, 46, 90);
+    font-family:cursive;
+
+}
+h3{text-align: center;
+    font-size: 30px;
+    color: black;
+    font-family:cursive;
+}
+
+/* Styles for paragraph class */
+.p_class{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 170px;
+    margin-left: 50px;
+    margin-right: 50px;
+    background: rgb(30, 103, 156);
+    font-size: 25px;
+    border-radius: 20px;
+}
+.p_class p{
+    padding: 30px;
+}
+
+div.gallery {
+    border: 1px solid #5d5b5b;
+}
+
+div.gallery:hover {
+    border: 1px solid #edece7;
+}
+
+div.gallery img {
+    width: 100%;
+    height: 250px;
+    opacity: 1;
+}
+
+/* Styles for description of images */
+div.desc {
+    padding: 15px;
+    text-align: left;
+    font-size: 20px;
+}
+
+/* Hover styles for links inside descriptions */
+div.desc a:hover{color:rgb(193, 198, 124);
+}
+
+/* Clears floats */
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.sena{
+    background-color: rgb(165, 166, 180);
+    height: auto;
+    opacity: 0.9;
+    text-shadow: 3px;
+}
+/* Styles for images inside 'sena' section */ 
+.sena img{
+    padding-left: 620px;
+    margin-right: 10px;
+    margin-bottom:10px;
+    padding-right: 25px;
+    transition: transform .2s;
+    display: inline;
+}
+.sena h2{
+    padding-top: 30px;
+    text-align: center;
+    color: black;
+}
+.sena p{text-align: left;
+    font-size: 22px;
+    text-justify: auto;
+    text-align: justify;
+    padding-left: 25px;
+    padding-right: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+
+}
+
+/* Styles for buttons */
+.button {
+    background-color: #2e6a5c; /* Green */
+    border: none;
+    color: white;
+    padding: 13px 20px;
+    text-align: center;
+    text-decoration: none;
+    display:inline-block;
+    font-size: 18px;
+    margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; 
+    transition-duration: 0.4s;
+    border-radius: 5px;
+    
+}
+
+.button2:hover {
+    box-shadow: 0 14px 18px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    
+    
+}
+.center a{
+    color: #edece7;
+}
+
+/* Hover styles for links inside centered elements */
+.center a:hover{
+    color:rgb(155, 186, 196);
+}
+
+
+.buttonH {
+    background-color: #252a3c; /* Green */
+    border: none;
+    color: whitesmoke;
+    padding: 13px 20px;
+    text-align: center;
+    text-decoration: none;
+    display:inline-block;
+    font-size: 18px;
+    margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; 
+    transition-duration: 0.4s;
+    border-radius: 5px;
+    
+}
+
+.buttonH:hover {
+    box-shadow: 0 14px 18px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+footer{
+    margin-top: 10px;
+    background: #000;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    font-size: 20px;
+}
+
+footer{
+    color: #fff;
+    padding: 10px;
+}
+footer a{
+    color: aqua;
+}
+
+/* CSS for the navigation bar */
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    float: right; /* Float the navigation to the right */
+    font-size: 26px; /* Change the font size */
+}
+li {
+    display: inline-block;
+    margin-left: 30px; /* Adjust spacing between navigation links */
+}
+li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+li a:hover {
+    background: grey;
+    text-transform: uppercase;
+}
+nav {
+    background: black;
+    overflow: hidden;
+    position: fixed; /* Make the navigation bar fixed */
+    width: 100%; /* Set width to 100% */
+    top: 0; /* Position at the top */
+    z-index: 1000; /* Ensure it's above other content */
+}
+.logo img {
+    margin-top: 0px;
+    margin-left: -6px;
+    height: 50px; /* Adjust logo height */
+    width: 150px;
+    float: left; /* Float the logo to the left */
+}

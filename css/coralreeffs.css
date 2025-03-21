@@ -1,0 +1,141 @@
+body{
+    background-image: url(coral.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    background-size: 100% 100%;
+}
+h1{font-size: 60px;
+    text-align: center;
+    color: rgb(48, 88, 131);
+    font-family:cursive;
+
+}
+h3{text-align: center;
+    font-size: 30px;
+    color:rgb(18, 77, 105) ;
+    font-family:cursive;
+}
+
+
+
+.responsive {
+    padding: 8px 8px;
+    float: left;
+    width: 24.999999%;
+    box-sizing: border-box;
+    background-color: rgb(128, 184, 156);
+
+}
+
+.coral{
+    background-color: rgb(224, 233, 230);height: 950px;
+} 
+.coral img{
+    padding-left: 35px;
+    float: left;
+    margin-right: 10px;
+    margin-bottom:10px;
+    padding-right: 25px;
+    transition: transform .2s;
+    display: inline;
+}
+.coral h2{
+    padding-top: 25px;
+    padding-left: 30px;
+    color: #2e6a5c;
+}
+
+.coral p {
+    text-align: left;
+    font-size: 30px; /* Increased font size */
+    text-justify: auto;
+    text-align: justify;
+    padding-left: 20px;
+    padding-right: 15px;
+}
+.coral img:hover {
+    -ms-transform: scale(1.5); 
+    -webkit-transform: scale(1.5); 
+    transform: scale(1.5);
+}
+
+.button {
+    background-color: #2e6a5c; /* Green */
+    border: none;
+    color: white;
+    padding: 13px 20px;
+    text-align: center;
+    text-decoration: none;
+    display:inline-block;
+    font-size: 18px;
+    margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; 
+    transition-duration: 0.4s;
+    border-radius: 5px;
+    
+}
+
+.button2:hover {
+    box-shadow: 0 14px 18px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    
+    
+}
+.center a{
+    color: #edece7;
+}
+.center a:hover{
+    color:rgb(155, 186, 196);
+}
+
+
+.buttonH {
+    background-color: #252a3c; /* Green */
+    border: none;
+    color: white;
+    padding: 13px 20px;
+    text-align: center;
+    text-decoration: none;
+    display:inline-block;
+    font-size: 18px;
+    margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; 
+    transition-duration: 0.4s;
+    border-radius: 5px;
+    
+}
+
+.buttonH:hover {
+    box-shadow: 0 14px 18px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.footer{
+    background-color: #4d9886;
+    height: 50px;
+    position: static;
+    margin-left: -8px;
+    margin-right: -8px;
+}
+.footer p{
+    font-size: 20px;
+    color: #f2f2f2;
+    font-style: italic;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.footer a{
+    color: #f2f2f2;
+    font-size: 20px;
+    font-style: italic;
+}
+.footer a:hover{
+    color: black;
+}

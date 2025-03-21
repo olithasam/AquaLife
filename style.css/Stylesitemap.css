@@ -1,0 +1,140 @@
+*{
+    position: relative;
+    margin: 0;
+    padding: 0;
+
+}
+
+/* Styles for the body of the webpage */
+body {
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+    background-image: url(wall.avif);
+}
+
+svg g rect {
+    fill: transparent;
+    transition: fill 1s ease;
+    /* transition the fill property over 1 seconds*/
+    fill: rgb(6, 6, 0);
+    opacity: 0.7;
+
+}
+
+svg g text:hover {
+    cursor: pointer;
+}
+
+
+svg g rect:hover {
+    cursor: pointer;
+    fill: #2C8C99
+    /* Change the fill color on hover*/
+}
+
+#svg-container {
+    width: 100%;
+    height: 100vh;
+    /* Adjust this if you want a specific height for th svg */
+}
+
+#svg {
+    width: 100%;
+    height: 100%;
+}
+
+h1 {
+    padding-top: 90px;
+    color: #ccc;
+    text-align: center;
+    font-size: 2rem;
+    text-shadow: rgba(0,0,0,0.6) 1px 0, rgba(0,0,0,0.6) 1px 0, rgba(0,0,0,0.6) 0 1px, rgba(0,0,0,0.6) 0 1px;
+}
+
+/* Styles for SVG groups */
+svg g {
+    padding-left: 4%;
+    padding-right: 2%;
+    margin: 0 auto;
+    width: 100%
+
+}
+
+/* Styles for button-like elements */
+.pd {
+    background-color: #242323;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 2px 2px 5px #333;
+  text-decoration: none;
+}
+
+.pd:hover {
+    background-color: #cccecf;
+    color: #000;
+}
+
+/* CSS for the navigation bar */
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    float: right; /* Float the navigation to the right */
+    font-size: 26px; /* Change the font size */
+}
+li {
+    display: inline-block;
+    margin-left: 30px; /* Adjust spacing between navigation links */
+    
+}
+li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+li a:hover {
+    background: grey;
+    text-transform: uppercase;
+}
+nav {
+    background: black;
+    overflow: hidden;
+    position: fixed; /* Make the navigation bar fixed */
+    width: 100%; /* Set width to 100% */
+    top: 0; /* Position at the top */
+    z-index: 1000; /* Ensure it's above other content */
+    
+}
+.logo img {
+    margin-top: 0px;
+    margin-left: -6px;
+    height: 50px; /* Adjust logo height */
+    width: 150px;
+    float: left; /* Float the logo to the left */
+}
+
+footer{
+    margin-top: 10px;
+    background: #000;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    font-size: 20px;
+}
+
+footer{
+    color: #fff;
+    padding: 10px;
+}
+footer a{
+    color: aqua;
+    padding-top: 10px;
+}
